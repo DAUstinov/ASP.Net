@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewBag.Title = "NewBook";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<div>
+    <form method="post">
+        <input type="hidden" value="@ViewBag.BookId" name="BookId" />
+        <table>
+            <tr>
+                <td><p>Inter name</p></td>
+                <td><input type="text" name="Name" /></td>
+            </tr>
+            <tr>
+                <td><p>Inter author of book</p></td>
+                <td><input type="text" name="Author" /></td>
+            </tr>
+            <tr>
+                <td><p>Inter price of book</p></td>
+                <td><input type="text" name="Price" /></td>
+            </tr>
+            <tr><td><input type="submit" value="Send" /></td></tr>
+        </table>
+    </form>
+</div>
+
