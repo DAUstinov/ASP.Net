@@ -3,15 +3,15 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Web.Mvc;
 using WebApplication1.Models;
-using WebApplication1.Interfaces;
 using WebApplication1.Repositories;
+using System.Linq;
+using WebApplication1.Filters;
 
 namespace WebApplication1.Controllers
 {
     public class HomeController : Controller
     {
         private readonly BookContext db = new BookContext();
-
         UnitOfWork unitOfWork;
 
         public HomeController()
@@ -21,9 +21,6 @@ namespace WebApplication1.Controllers
 
         public ActionResult Book()
         {
-           /* IEnumerable<Book> books = db.Books;
-            ViewBag.Books = books;*/
-
             var books = unitOfWork.Books.GetAll();
 
             ViewBag.books = books;
@@ -80,10 +77,29 @@ namespace WebApplication1.Controllers
 
         public ActionResult Authorization()
         {
-            return View();
+            return View(db.ExceptionDetails.ToList());
         }
         public ActionResult Index()
         {
+            return View();
+        }
+
+        [ExceptionLog]
+        public ActionResult Test(int id)
+        {
+            if (id > 3)
+            {
+                int[] mas = new int[2];
+                mas[6] = 4;
+            }
+            else if (id < 3)
+            {
+                throw new Exception("id не может быть меньше 3");
+            }
+            else
+            {
+                throw new Exception("Некорректное значение для параметра id");
+            }
             return View();
         }
 

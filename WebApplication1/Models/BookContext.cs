@@ -4,14 +4,18 @@ namespace WebApplication1.Models
 {
     public class BookContext : DbContext
     {
+
         public DbSet<Book> Books { get; set; }
 
         public DbSet<Purchase> Purchases { get; set; }
 
         public DbSet<Shop> Shops { get; set; }
+
+        public DbSet<ExceptionDetail> ExceptionDetails { get; set; }
     }
 
-    public class BookDbInitializer : DropCreateDatabaseIfModelChanges<BookContext>
+
+    /*public class BookDbInitializer : DropCreateDatabaseIfModelChanges<BookContext>
     {
         protected override void Seed(BookContext db)
         {
@@ -21,5 +25,5 @@ namespace WebApplication1.Models
 
             base.Seed(db);
         }
-    }
+    }*/
 }

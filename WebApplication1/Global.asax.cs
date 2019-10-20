@@ -14,7 +14,7 @@ namespace WebApplication1
     {
         protected void Application_Start()
         {
-            Database.SetInitializer(new BookDbInitializer());
+            //Database.SetInitializer(new BookDbInitializer());
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
