@@ -1,8 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Web.Mvc;
-using WebApplication1.Models;
+using Context.DataBase;
+using Context.Model;
 
 namespace WebApplication1.Filters
 {
@@ -22,10 +21,11 @@ namespace WebApplication1.Filters
 
             using ( BookContext db = new BookContext())
             {
+
                 db.ExceptionDetails.Add(exceptionDetail);
-                db.SaveChangesAsync();
+                db.SaveChanges();
+
             }
-            filterContext.ExceptionHandled = true;
         }
     }
 }

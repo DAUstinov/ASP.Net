@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Web.Mvc;
-using WebApplication1.Models;
-using WebApplication1.Repositories;
 using System.Linq;
 using WebApplication1.Filters;
+using Context.DataBase;
+using Context.Model;
+using Repositories.Repositories;
+using Foundation.Service;
 
 namespace WebApplication1.Controllers
 {
@@ -13,9 +15,11 @@ namespace WebApplication1.Controllers
     {
         private readonly BookContext db = new BookContext();
         UnitOfWork unitOfWork;
+        BookService bookService;
 
         public HomeController()
         {
+            bookService = new BookService();
             unitOfWork = new UnitOfWork();
         }
 
@@ -31,16 +35,16 @@ namespace WebApplication1.Controllers
         [HttpGet]
         public ActionResult NewBook()
         {
-             
+
             return View();
         }
 
         [HttpPost]
         public async Task<RedirectResult> NewBook(Book book)
         {
-            db.Books.Add(book);
+            bookService.AddBook(book);
 
-            await db.SaveChangesAsync();
+            db.SaveChanges();
 
             return Redirect("Book");
         }
@@ -49,7 +53,7 @@ namespace WebApplication1.Controllers
         public ActionResult Buy(int id)
         {
             ViewBag.BookId = id;
-            
+
             return View();
         }
 
@@ -71,37 +75,47 @@ namespace WebApplication1.Controllers
             return View();
         }
 
+        [HttpGet]
+        public ActionResult DeleteBook(int id)
+        {
+            Book b = db.Books.Find(id);
+            return View(b);
+        }
 
-
-
+        [HttpPost , ActionName ("DeleteBook")]
+        public async Task<RedirectResult> DeleteConf(int id)
+        {
+            unitOfWork.Books.Delete(id);
+            db.SaveChanges();
+            return Redirect("~/Home/Book");
+        }
 
         public ActionResult Authorization()
         {
-            return View(db.ExceptionDetails.ToList());
+            return View();
         }
         public ActionResult Index()
         {
             return View();
         }
 
-        [ExceptionLog]
-        public ActionResult Test(int id)
-        {
-            if (id > 3)
-            {
-                int[] mas = new int[2];
-                mas[6] = 4;
-            }
-            else if (id < 3)
-            {
-                throw new Exception("id не может быть меньше 3");
-            }
-            else
-            {
-                throw new Exception("Некорректное значение для параметра id");
-            }
-            return View();
-        }
+        //public ActionResult Test(int id)
+        //{
+        //    if (id > 3)
+        //    {
+        //        int[] mas = new int[2];
+        //        mas[6] = 4;
+        //    }
+        //    else if (id < 3)
+        //    {
+        //        throw new Exception("id не может быть меньше 3");
+        //    }
+        //    else
+        //    {
+        //        throw new Exception("Некорректное значение для параметра id");
+        //    }
+        //    return View();
+        //}
 
     }
 }

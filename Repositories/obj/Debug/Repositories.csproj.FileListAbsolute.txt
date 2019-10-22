@@ -1,0 +1,14 @@
+C:\Users\DIMA\source\repos\WebApplication1\Repositories\bin\Debug\Repositories.dll
+C:\Users\DIMA\source\repos\WebApplication1\Repositories\bin\Debug\Repositories.pdb
+C:\Users\DIMA\source\repos\WebApplication1\Repositories\obj\Debug\Repositories.csprojAssemblyReference.cache
+C:\Users\DIMA\source\repos\WebApplication1\Repositories\obj\Debug\Repositories.dll
+C:\Users\DIMA\source\repos\WebApplication1\Repositories\obj\Debug\Repositories.pdb
+C:\Users\DIMA\source\repos\WebApplication1\Repositories\bin\Debug\Repositories.dll.config
+C:\Users\DIMA\source\repos\WebApplication1\Repositories\bin\Debug\EntityFramework.dll
+C:\Users\DIMA\source\repos\WebApplication1\Repositories\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\DIMA\source\repos\WebApplication1\Repositories\bin\Debug\MyProject.Context.dll
+C:\Users\DIMA\source\repos\WebApplication1\Repositories\bin\Debug\MyProject.Context.pdb
+C:\Users\DIMA\source\repos\WebApplication1\Repositories\bin\Debug\MyProject.Context.dll.config
+C:\Users\DIMA\source\repos\WebApplication1\Repositories\bin\Debug\EntityFramework.xml
+C:\Users\DIMA\source\repos\WebApplication1\Repositories\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\DIMA\source\repos\WebApplication1\Repositories\obj\Debug\Repositories.csproj.CopyComplete

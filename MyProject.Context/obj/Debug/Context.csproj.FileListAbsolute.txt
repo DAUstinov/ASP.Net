@@ -1,0 +1,11 @@
+C:\Users\DIMA\source\repos\WebApplication1\MyProject.Context\obj\Debug\Context.csprojAssemblyReference.cache
+C:\Users\DIMA\source\repos\WebApplication1\MyProject.Context\bin\Debug\MyProject.Context.dll.config
+C:\Users\DIMA\source\repos\WebApplication1\MyProject.Context\bin\Debug\MyProject.Context.dll
+C:\Users\DIMA\source\repos\WebApplication1\MyProject.Context\bin\Debug\MyProject.Context.pdb
+C:\Users\DIMA\source\repos\WebApplication1\MyProject.Context\bin\Debug\EntityFramework.dll
+C:\Users\DIMA\source\repos\WebApplication1\MyProject.Context\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\DIMA\source\repos\WebApplication1\MyProject.Context\bin\Debug\EntityFramework.xml
+C:\Users\DIMA\source\repos\WebApplication1\MyProject.Context\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\DIMA\source\repos\WebApplication1\MyProject.Context\obj\Debug\Context.csproj.CopyComplete
+C:\Users\DIMA\source\repos\WebApplication1\MyProject.Context\obj\Debug\MyProject.Context.dll
+C:\Users\DIMA\source\repos\WebApplication1\MyProject.Context\obj\Debug\MyProject.Context.pdb
